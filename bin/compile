@@ -137,8 +137,11 @@ VENDORED_SCONS="$(mktmpdir scons)"
 # download and unpack packages
 echo "-----> Fetching Node.js binaries nodejs:${NODE_VERSION} npm:${NPM_VERSION} scons:${SCONS_VERSION}"
 package_download "nodejs" "${NODE_VERSION}" "${VENDORED_NODE}"
+echo "-----> Fetch nodejs done"
 package_download "npm" "${NPM_VERSION}" "${VENDORED_NPM}"
+echo "-----> Fetch npm done"
 package_download "scons" "${SCONS_VERSION}" "${VENDORED_SCONS}"
+echo "-----> Fetch scons done"
 
 # vendor node into the slug
 PATH="$BUILD_DIR/bin:$PATH"
